@@ -50,7 +50,7 @@ const people = [
 // EXERCISE 1
 // Change the value of the variable nameOfFirstPerson to equal the name of the first person.
 
-const nameOfFirstPerson = "Homer";
+const nameOfFirstPerson = people[0].name;
 console.log("1.",nameOfFirstPerson);
 
 // EXERCISE 2
