@@ -21,6 +21,17 @@ body {
   border: none;
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  -webkit-transition: 1s steps(4);
+  transition: 2s steps(4);
+  animation: bounce 7s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0px, 20px);
+  }
 }
 
 .start-button:hover {
@@ -28,6 +39,7 @@ body {
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  width: 20vw;
 }
 
 .start-button:disabled {
@@ -50,10 +62,26 @@ body {
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
-  transition: transform 0.5s;
+  transition: transform 0.2s;
+}
+.bread {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  border: none;
+  background: rgb(71, 212, 94);
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  transition: transform 2s;
 }
 
 .toast--hidden {
+  transform: translate3d(-150%, 0, 0);
+}
+.bread--hidden {
   transform: translate3d(-150%, 0, 0);
 }
 
@@ -70,9 +98,37 @@ body {
   width: 100%;
   transition: opacity 0.25s;
 }
+@keyframes MyDiv {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 150px;
+    top: 0px;
+  }
+}
+
+.countdownBread {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: black;
+
+  opacity: 0;
+  width: 100%;
+  transition: opacity 1s;
+}
 
 .countdown--visible {
   opacity: 0.8;
   width: 0%;
-  transition: width linear 2000ms;
+  transition: width linear 3000ms;
+}
+
+.countdown--visible--bread {
+  opacity: 0.8;
+  width: 0%;
+  transition: width linear 5000ms;
 }
