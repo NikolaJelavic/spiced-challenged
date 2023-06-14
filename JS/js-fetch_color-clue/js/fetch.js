@@ -19,6 +19,7 @@ export async function fetchNewColor() {
 
   // --v-- your code here --v--
 
+  //const randomColor = await(await fetch(colorApiUrl).json())
   try {
     const response = await fetch(colorApiUrl);
     if (response.ok) {
@@ -28,7 +29,7 @@ export async function fetchNewColor() {
       console.error("Failed to fetch color data.");
     }
   } catch (error) {
-    console.error("An Error occurred");
+    console.error(error);
   }
 
   // --^-- your code here --^--
