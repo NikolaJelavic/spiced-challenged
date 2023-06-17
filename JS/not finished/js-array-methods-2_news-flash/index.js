@@ -5,10 +5,9 @@ import { checkFilteredNews, checkSortedNews } from "./utils/results.js";
 const container = document.querySelector('[data-js="card-container"]');
 
 // Part 1 - start here
-const filteredNews = news.filter(() => {
-  return true;
-});
+const filteredNews = news.filter((p) => p.categories.includes("politics"));
 
+// console.log(filteredNews);
 // Part 2 - start here
 const sortedNews = filteredNews;
 

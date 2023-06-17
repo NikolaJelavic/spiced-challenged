@@ -108,31 +108,37 @@ const animalsSortedAlphabetically = animals.slice().sort((a, b) => {
 });
 // console.log(animalsSortedAlphabetically);
 
-// const animalsSortedByWeightStartingWithLowest = animals.sort((a, b) => a.weight - b.weight); //   map((animal) => animal.weight)
-// console.log("1"+ animalsSortedByWeightStartingWithLowest);
+const animalsSortedByWeightStartingWithLowest = animals
+  .slice()
+  .sort((a, b) => a.weight - b.weight);
+//   map((animal) => animal.weight)
+// console.log(animalsSortedByWeightStartingWithLowest);
 
-const animalsSortedByWeightReversed = null;
-
+const animalsSortedByWeightReversed =
+  animalsSortedByWeightStartingWithLowest.reverse();
+// console.log(animalsSortedByWeightReversed);
 // const animalWithWeightMoreThanFivehundredExists = animals.continents.includes("Africa");
 
 // Hint: Filter for Europe first, then check every animal for its weight.
 const allAnimalsInEuropeWeighLessThanOnehundred = animals
   .filter((animal) => animal.continents.includes("Europe"))
-  .map((animal) => animal.weight < 100);
-console.log(allAnimalsInEuropeWeighLessThanOnehundred);
+  .filter((animal) => animal.weight < 100);
+
+// console.log(allAnimalsInEuropeWeighLessThanOnehundred);
 
 // Hint: filter + map + reduce
 const weightOfAllAnimalsInAfrica = animals
   .filter((animal) => animal.continents.includes("Africa"))
   .map((animal) => animal.weight)
-  .reduce((acc, cur) => acc + cur);
+  .reduce((acc, curr) => acc + curr);
+
 // console.log(weightOfAllAnimalsInAfrica);
 
 // Hint: As above, but divided by the number of animals in Africa.
 const averageWeightOfAllAnimalsInAfrica =
   weightOfAllAnimalsInAfrica /
   animals.filter((animal) => animal.continents.includes("Africa")).length;
-// console.log(averageWeightOfAllAnimalsInAfrica);
+console.log(averageWeightOfAllAnimalsInAfrica);
 
 // export {
 //   firstAnimalStartingWithLetterG,
