@@ -1,0 +1,16 @@
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.number {
+  background-color: var(--color-nemo);
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  color: var(--color-foam);
+}
+div.tab p {
+  padding: 0;
+  margin: 0 10px;
+}

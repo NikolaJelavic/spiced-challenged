@@ -1,0 +1,17 @@
+.motto-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* width: 50%; */
+  /* margin: 50px; */
+  font-weight: 700;
+}
+article {
+  /* display: flex; */
+  width: 50%;
+  border: 2px;
+}
+article p {
+  text-align: center;
+}

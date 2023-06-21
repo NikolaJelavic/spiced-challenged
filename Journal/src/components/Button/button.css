@@ -1,0 +1,10 @@
+button {
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  margin: 20px 40%;  /*to be imroved*/
+  border: 0px;
+ 
+}

@@ -1,0 +1,5 @@
+div.tabs {
+  display: flex;
+  justify-content: left;
+  width: 40%;
+}

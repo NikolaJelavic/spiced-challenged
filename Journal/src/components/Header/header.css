@@ -1,0 +1,10 @@
+/* @import "/src/index.css" ; */
+
+header {
+  background-color: var(--color-water-10);
+  /* background-color: red; */
+  text-align: center;
+  /* height: 70px; */
+  font-size: 50px;
+  padding: 20px;
+}
