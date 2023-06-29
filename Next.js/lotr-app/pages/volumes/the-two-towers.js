@@ -1,18 +1,25 @@
-import Link from "next/link";
 import Image from "next/image";
+import { volumes } from "../../lib/data";
 
-export default function TheTwoTowers() {
+export default function Fellowship() {
+    const volume = volumes.find(({slug}) => slug === "the-two-towers")
   return (
-    <ul>
-      <li>
-        <Link href="/volumes">Volumes</Link>
-      </li>
-      <Image
-    src="/images/the-two-towers.png"
-    height={144}
-    width={144}
-    alt="the-two-towers"
-  />;
-    </ul>
+    <div key={volume.slug}>
+        <h2>{volume.title}</h2>
+        <p>{volume.description}</p>
+        <Image src={volume.cover} alt={volume.title} width={140} height={230} />
+        {volume.books.map((book) => (
+          <div key={book.ordinal}>
+            <h3>
+              {book.ordinal}
+              {":  "}
+              {book.title}
+            </h3>
+          </div>
+        ))}
+      </div>
+      
+      
+
   );
 }
